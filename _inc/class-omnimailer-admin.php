@@ -53,14 +53,7 @@ class OmniMailer_Admin {
 	}
 
 	public function admin_menu_subpages() {
-		add_submenu_page(
-			null,
-			'omnimailer_mailgun',
-			'omnimailer_mailgun',
-			'manage_options',
-			'omnimailer_mailgun',
-			array( $this, 'mailgun_options_page' )
-		);
+		add_submenu_page( null, 'omnimailer_mailgun', 'omnimailer_mailgun', 'manage_options', 'omnimailer_mailgun', array( $this, 'mailgun_options_page' ) );
 	}
 
 	public function register_settings() {

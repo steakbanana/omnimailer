@@ -96,11 +96,10 @@ class OmniMailer_Public {
 			'has_labels' => '1'
 		), $atts ) );
 
+		// Buffer the generated HTML
 		ob_start();
 
-		/**
-		 * Enqueue the form script corresponding to the service if available.
-		 */
+		// Enqueue the form script corresponding to the service if available.
 		if( ! empty( $service ) ) {
 			wp_enqueue_script( "omnimailer-{$service}-form" );
 

@@ -16,7 +16,9 @@ use OmniMailer\OmniMailer_Options;
                     <?php settings_fields( 'omnimailer' ); ?>
 
                     <table class="form-table">
-                        <?php OmniMailer_Options::add_option_text(
+                        <?php
+
+                        OmniMailer_Options::add_option_text(
                             __( 'Mailgun Domain Name', 'omnimailer' ),
                             'mailgun_domain',
                             'omnimailer[mailgun][domain]',
@@ -24,6 +26,7 @@ use OmniMailer\OmniMailer_Options;
                             'samples.mailgun.org',
                             __( 'Your Mailgun domain name.', 'omnimailer' )
                         );
+
                         OmniMailer_Options::add_option_text(
                             __( 'Mailgun API Key', 'omnimailer' ),
                             'mailgun_api',
@@ -32,6 +35,7 @@ use OmniMailer\OmniMailer_Options;
                             'key-3ax6xnjp29jd6fds4gc373sgvjxteol0',
                             __( 'To find your key, visit the Mailgun Dashboard and click on "API keys".', 'omnimailer' )
                         );
+
                         OmniMailer_Options::add_option_select(
                             __( 'Mailgun Region', 'omnimailer' ),
                             'mailgun_region',
@@ -42,7 +46,9 @@ use OmniMailer\OmniMailer_Options;
                                 'us' => __( 'U.S./North America', 'omnimailer' ),
                             ),
                             __( 'Please choose the region your Mailgun sending domain is associated with.', 'omnimailer' )
-                        ); ?>
+                        );
+
+                        ?>
                     </table>
                     <p class="submit">
                         <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'omnimailer' ); ?>">

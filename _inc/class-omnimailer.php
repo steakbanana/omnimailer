@@ -15,8 +15,6 @@ if( ! defined( 'ABSPATH' ) )
  * version of the plugin.
  *
  * @since      0.0.1
- * @package    OmniMailer
- * @subpackage OmniMailer/_inc
  * @author     Julian Hartmann <jh@steakbanana.com>
  */
 class OmniMailer {
@@ -26,11 +24,7 @@ class OmniMailer {
 	protected $version;
 
 	public function __construct() {
-		if ( defined( 'OMNIMAILER_VER' ) )
-			$this->version = OMNIMAILER_VER;
-		else
-			$this->version = '0.1';
-
+		$this->version = OMNIMAILER_VER;
 		$this->plugin_name = 'omnimailer';
 
 		$this->load_dependencies();

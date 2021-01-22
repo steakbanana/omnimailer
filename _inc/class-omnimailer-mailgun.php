@@ -93,7 +93,7 @@ class OmniMailer_Mailgun {
 			'name' => ! empty( $name ) ? sanitize_text_field( $name ) : ''
 		);
 
-		$data = self::add_optional_fields_to_data( $data, $optional );
+		$data = array_merge( $data, $optional );
 
 		$url = self::get_endpoint() . "lists/{$list}/members";
 
@@ -134,6 +134,9 @@ class OmniMailer_Mailgun {
 		/* translators: %s: Site Name */
 		$subject = sprintf( __( 'Please activate your subscription to %s.', 'omnimailer' ), get_bloginfo( 'name' ) );
 
+		/**
+		 * Aggregate e-mail content in PHP output buffer
+		 */
 		ob_start();
 		include_once( OMNIMAILER_DIR . 'template-parts/emails/header.php' );
 		include_once( OMNIMAILER_DIR . 'template-parts/emails/confirm-double-optin.php' );
@@ -142,23 +145,6 @@ class OmniMailer_Mailgun {
 		ob_end_clean();
 
 		wp_mail( $recipient, $subject, $message );
-	}
-
-	/**
-	 * Adds a set of optional data to an existing set of data.
-	 *
-	 * @param array $data       An existing set of data.
-	 * @param array $optional   A set of optional data to be added to the first set.
-	 *
-	 * @since 0.0.1
-	 */
-	private static function add_optional_fields_to_data( $data, $optional ) {
-		foreach( $optional as $key => $option ) {
-			if( ! empty( $option ) )
-				$data[$key] = $option;
-		}
-
-		return $data;
 	}
 
 	public static function get_endpoint() {

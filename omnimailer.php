@@ -3,7 +3,7 @@
  * @wordpress-plugin
  * Plugin Name: OmniMailer
  * Description: This plugin connects to various mailing services using their API to manage mailing lists, subscribers and more.
- * Version:     0.0.1
+ * Version:     0.1
  * Author:      STEAKBANANA
  * Author URI:  https://www.steakbanana.com/
  * Text Domain: omnimailer
