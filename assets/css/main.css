@@ -1,0 +1,44 @@
+/* ========================
+ *   0. TABLE OF CONTENTS
+ *
+ *   1. VARIABLES
+ *   2. HELPERS
+ *   3. NOTIFICATIONS
+ * ======================== */
+/* ========================
+ *   1. VARIABLES
+ * ======================== */
+/* ========================
+ *   2. HELPERS
+ * ======================== */
+.hide {
+  display: none !important; }
+
+/* ========================
+ *   3. NOTIFICATIONS
+ * ======================== */
+.omnimailer-push-notification {
+  padding: 0.75em 1em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9; }
+  .omnimailer-push-notification.success {
+    background-color: #aad4ab;
+    border: 1px solid #3c763d;
+    color: #3c763d; }
+  .omnimailer-push-notification.error {
+    background-color: #ebcdcc;
+    border: 1px solid #a94442;
+    color: #a94442; }
+  .omnimailer-push-notification .omnimailer-push-notification-inner {
+    position: relative; }
+    .omnimailer-push-notification .omnimailer-push-notification-inner .omnimailer-push-notification-close-button {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 0.5em 1em;
+      position: absolute;
+      top: -0.5em;
+      right: 1em; }

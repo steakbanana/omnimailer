@@ -1,0 +1,119 @@
+/* ========================
+ *   0. TABLE OF CONTENTS
+ *
+ *   1. VARIABLES
+ *   2. HELPERS
+ *   3. FORM CLASSES
+ * ======================== */
+/* ========================
+ *   1. VARIABLES
+ * ======================== */
+/* ========================
+ *   2. HELPERS
+ * ======================== */
+.hide {
+  display: none !important; }
+
+/* ========================
+ *   3. FORM CLASSES
+ * ======================== */
+.omnimailer-form {
+  position: relative; }
+  .omnimailer-form .omnimailer-form-message {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; }
+    .omnimailer-form .omnimailer-form-message.success {
+      background-color: #aad4ab;
+      border: 1px solid #3c763d; }
+      .omnimailer-form .omnimailer-form-message.success .omnimailer-form-message-close-button,
+      .omnimailer-form .omnimailer-form-message.success .omnimailer-form-message-heading,
+      .omnimailer-form .omnimailer-form-message.success .omnimailer-form-message-text {
+        color: #3c763d; }
+    .omnimailer-form .omnimailer-form-message.error {
+      background-color: #ebcdcc;
+      border: 1px solid #a94442; }
+      .omnimailer-form .omnimailer-form-message.error .omnimailer-form-message-close-button,
+      .omnimailer-form .omnimailer-form-message.error .omnimailer-form-message-heading,
+      .omnimailer-form .omnimailer-form-message.error .omnimailer-form-message-text {
+        color: #a94442; }
+    .omnimailer-form .omnimailer-form-message .omnimailer-form-message-inner {
+      position: relative; }
+      .omnimailer-form .omnimailer-form-message .omnimailer-form-message-inner .omnimailer-form-message-close-button {
+        cursor: pointer;
+        font-weight: 600;
+        padding: 0.5em 1em;
+        position: absolute;
+        top: -0.5em;
+        right: -1em; }
+      .omnimailer-form .omnimailer-form-message .omnimailer-form-message-inner .omnimailer-form-message-heading {
+        font-size: 1.2rem;
+        font-weight: 600; }
+  .omnimailer-form form fieldset {
+    padding: 1em;
+    position: relative; }
+    .omnimailer-form form fieldset .loader-overlay {
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    .omnimailer-form form fieldset label {
+      display: block;
+      margin-bottom: 1em;
+      position: relative; }
+      .omnimailer-form form fieldset label.homepage-field-label {
+        display: none !important; }
+    .omnimailer-form form fieldset input:invalid, .omnimailer-form form fieldset select:invalid {
+      box-shadow: none; }
+    .omnimailer-form form fieldset input:not([type='checkbox']), .omnimailer-form form fieldset select:not([type='checkbox']) {
+      display: block; }
+    .omnimailer-form form fieldset input.success, .omnimailer-form form fieldset select.success {
+      border: 1px solid #3c763d;
+      box-shadow: rgba(60, 118, 61, 0.5) 0 1px 2px 0 inset;
+      color: #3c763d; }
+    .omnimailer-form form fieldset input.error, .omnimailer-form form fieldset select.error {
+      border: 1px solid #a94442;
+      box-shadow: rgba(169, 68, 66, 0.5) 0 1px 2px 0 inset;
+      color: #a94442; }
+    .omnimailer-form form fieldset .omnimailer-form-alert {
+      background-color: #ebcdcc;
+      font-size: 0.8em;
+      padding: 0 0.25em;
+      position: absolute;
+      top: 0; }
+      .omnimailer-form form fieldset .omnimailer-form-alert.success {
+        color: #3c763d; }
+        .omnimailer-form form fieldset .omnimailer-form-alert.success .omnimailer-form-alert-inner::after {
+          border-top: 5px solid #aad4ab; }
+      .omnimailer-form form fieldset .omnimailer-form-alert.error {
+        color: #a94442; }
+        .omnimailer-form form fieldset .omnimailer-form-alert.error .omnimailer-form-alert-inner::after {
+          border-top: 5px solid #ebcdcc; }
+      .omnimailer-form form fieldset .omnimailer-form-alert .omnimailer-form-alert-inner {
+        position: relative; }
+        .omnimailer-form form fieldset .omnimailer-form-alert .omnimailer-form-alert-inner::after {
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          clear: both;
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 25%;
+          width: 0;
+          height: 0; }
+    .omnimailer-form form fieldset .checkbox-label.success {
+      color: #3c763d;
+      font-weight: 600; }
+    .omnimailer-form form fieldset .checkbox-label.error {
+      color: #a94442;
+      font-weight: 600; }

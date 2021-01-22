@@ -1,0 +1,154 @@
+/* ========================
+ *   0. TABLE OF CONTENTS
+ *
+ *   1. VARIABLES
+ *   2. HELPERS
+ *   3. FORM CLASSES
+ * ======================== */
+
+/* ========================
+ *   1. VARIABLES
+ * ======================== */
+
+@import 'variables'
+
+/* ========================
+ *   2. HELPERS
+ * ======================== */
+
+.hide
+  display: none !important
+
+/* ========================
+ *   3. FORM CLASSES
+ * ======================== */
+
+.omnimailer-form
+  position: relative
+
+  .omnimailer-form-message
+    background-color: $overlay-bg
+    padding: 1em
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+
+    &.success
+      background-color: $success-color-bg
+      border: 1px solid $success-color
+
+      .omnimailer-form-message-close-button,
+      .omnimailer-form-message-heading,
+      .omnimailer-form-message-text
+        color: $success-color
+
+    &.error
+      background-color: $alert-color-bg
+      border: 1px solid $alert-color
+
+      .omnimailer-form-message-close-button,
+      .omnimailer-form-message-heading,
+      .omnimailer-form-message-text
+        color: $alert-color
+
+    .omnimailer-form-message-inner
+      position: relative
+
+      .omnimailer-form-message-close-button
+        cursor: pointer
+        font-weight: 600
+        padding: .5em 1em
+        position: absolute
+        top: -.5em
+        right: -1em
+
+      .omnimailer-form-message-heading
+        font-size: 1.2rem
+        font-weight: 600
+
+  form
+    fieldset
+      padding: 1em
+      position: relative
+
+      .loader-overlay
+        align-items: center
+        background-color: $overlay-bg
+        display: flex
+        justify-content: center
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+      label
+        display: block
+        margin-bottom: 1em
+        position: relative
+
+        // honeypot field
+        &.homepage-field-label
+          display: none !important
+
+      input, select
+        &:invalid
+          box-shadow: none
+
+        &:not([type='checkbox'])
+          display: block
+
+        &.success
+          border: 1px solid $success-color
+          box-shadow: transparentize($success-color, .5) 0 1px 2px 0 inset
+          color: $success-color
+
+        &.error
+          border: 1px solid $alert-color
+          box-shadow: transparentize($alert-color, .5) 0 1px 2px 0 inset
+          color: $alert-color
+
+      .omnimailer-form-alert
+        background-color: $alert-color-bg
+        font-size: .8em
+        padding: 0 .25em
+        position: absolute
+        top: 0
+
+        &.success
+          color: $success-color
+
+          .omnimailer-form-alert-inner::after
+            border-top: 5px solid $success-color-bg
+
+        &.error
+          color: $alert-color
+
+          .omnimailer-form-alert-inner::after
+            border-top: 5px solid $alert-color-bg
+
+        .omnimailer-form-alert-inner
+          position: relative
+
+          &::after
+            border-right: 5px solid transparent
+            border-left: 5px solid transparent
+            clear: both
+            content: ''
+            position: absolute
+            top: 100%
+            left: 25%
+            width: 0
+            height: 0
+
+      .checkbox-label
+        &.success
+          color: $success-color
+          font-weight: 600
+
+        &.error
+          color: $alert-color
+          font-weight: 600

@@ -1,0 +1,361 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OmniMailer 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/omnimailer\n"
+"POT-Creation-Date: 2021-01-01T12:00:37+01:00\n"
+"PO-Revision-Date: 2021-01-01 12:10+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE@formal\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: omnimailer\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: _inc/class-omnimailer-admin.php:39
+msgid "OmniMailer"
+msgstr "OmniMailer"
+
+#. Description of the plugin
+msgid ""
+"This plugin connects to various mailing services using their API to manage "
+"mailing lists, subscribers and more."
+msgstr ""
+"Dieses Plugin verbindet sich mit verschiedenen E-Mail-Diensten und verwendet "
+"ihre API um E-Mail-Listen, Abonnenten und mehr zu verwalten."
+
+#. Author of the plugin
+msgid "STEAKBANANA"
+msgstr "STEAKBANANA"
+
+#. Author URI of the plugin
+msgid "https://www.steakbanana.com/"
+msgstr "https://www.steakbanana.com/"
+
+#. translators: %s: First or full name of a subscriber
+#: template-parts/emails/confirm-double-optin.php:11
+msgid "Dear %s,"
+msgstr "Sehr geehrte/r %s,"
+
+#. translators: %s: Name of the origin site
+#: template-parts/emails/confirm-double-optin.php:15
+msgid ""
+"Please activate your subscription to %s by clicking on the following "
+"activation link within 48 hours."
+msgstr ""
+"Bitte aktivieren Sie Ihr Abonnement für %s, indem Sie innerhalb von 48 "
+"Stunden auf den nachfolgenden Aktivierungslink klicken."
+
+#: template-parts/emails/confirm-double-optin.php:19
+msgid ""
+"If clicking the link does not open a window stating that your subscription "
+"is now complete, or any window at all, please copy the complete link and "
+"paste it into your browser."
+msgstr ""
+"Falls sich durch den Klick kein Fenster öffnet, das Ihr Abonnement "
+"bestätigt, oder gar überhaupt kein Fenster, kopieren Sie bitte den "
+"vollständigen Link und fügen Sie ihn in Ihren Browser ein."
+
+#. translators: %s: URL of the origin site
+#: template-parts/emails/confirm-double-optin.php:23
+msgid ""
+"You are getting this e-mail because you entered your e-mail address in a "
+"subscription form at %s."
+msgstr ""
+"Sie erhalten diese E-Mail, weil Sie Ihre Adresse in ein Formular auf %s "
+"eingegeben haben."
+
+#: template-parts/emails/confirm-double-optin.php:24
+msgid ""
+"If you did not use the subscription form or would not like to be subscribed "
+"anymore, please disregard this e-mail."
+msgstr ""
+"Wenn Sie das Formular nicht abgesendet haben oder auf ein Abonnement "
+"verzichten wollen, ignorieren Sie diese E-Mail bitte."
+
+#: template-parts/emails/confirm-double-optin.php:25
+msgid ""
+"Your subscription attempt will be deleted 48 hours after this e-mail was "
+"sent."
+msgstr ""
+"Ihr Versuch für ein Abonnement wird 48 Stunden, nachdem diese E-Mail "
+"versendet wurde, gelöscht."
+
+#. translators: %s: Name of the origin site
+#: template-parts/emails/confirm-double-optin.php:29
+msgid "Warmest wishes, %s"
+msgstr "Herzliche Grüße, %s"
+
+#: template-parts/forms/mailgun-subscribe.php:27
+#: template-parts/forms/mailgun-subscribe.php:28
+msgid "Name"
+msgstr "Name"
+
+#: template-parts/forms/mailgun-subscribe.php:33
+#: template-parts/forms/mailgun-subscribe.php:34
+msgid "E-mail address"
+msgstr "E-Mail-Adresse"
+
+#: template-parts/forms/mailgun-subscribe.php:39
+#: template-parts/forms/mailgun-subscribe.php:40
+msgctxt "Honeypot field"
+msgid "Homepage"
+msgstr "Homepage"
+
+#. translators: %s: Privacy Policy URL
+#: template-parts/forms/mailgun-subscribe.php:45
+msgid "I accept this site's <a href=\"%s\">privacy policy</a>."
+msgstr ""
+"Ich akzeptiere die <a href=\"%s\">Datenschutzbestimmungen</a> dieser Seite."
+
+#: template-parts/forms/mailgun-subscribe.php:51
+msgid "Submit"
+msgstr "Absenden"
+
+#: template-parts/forms/mailgun-subscribe.php:53
+msgid "One moment please..."
+msgstr "Einen Moment bitte..."
+
+#: _inc/class-omnimailer-mailgun.php:39
+msgid ""
+"(500) API call failed. Please check your network connection or try again "
+"later."
+msgstr ""
+"(500) API-Aufruf fehlgeschlagen. Bitte überprüfen Sie Ihre "
+"Internetverbindung oder versuchen Sie es später erneut."
+
+#: _inc/class-omnimailer-mailgun.php:54
+msgid "No mailing list provided."
+msgstr "Keine Liste angegeben."
+
+#. translators: %s: Site Name
+#: _inc/class-omnimailer-mailgun.php:80
+msgid "Please activate your subscription to %s."
+msgstr "Bitte aktivieren Sie Ihr Abonnement bei %s."
+
+#: _inc/class-omnimailer-public.php:105
+msgid "Error while displaying the form - unknown handle or service."
+msgstr "Fehler bei der Anzeige des Formulars - unbekannte Aktion oder Dienst."
+
+#: _inc/class-omnimailer-public.php:109
+msgid "Error while displaying the form - missing handle."
+msgstr "Fehler bei der Anzeige des Formulars - unbekannte Aktion."
+
+#: _inc/class-omnimailer-public.php:113
+msgid "Error while displaying the form - missing service."
+msgstr "Fehler bei der Anzeige des Formulars - unbekannter Dienst."
+
+#: _inc/options/general.php:9
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: _inc/options/general.php:16
+msgid "Double Opt-In"
+msgstr "Zweifacher Opt-In"
+
+#: _inc/options/general.php:21
+msgid ""
+"New subscribers need to confirm their subscription by clicking an activation "
+"link sent to their e-mail address."
+msgstr ""
+"Neue Abonnenten müssen ihr Abonnement bestätigen, indem sie auf einen "
+"Aktivierungslink klicken, der an ihre E-Mail-Adresse gesendet wird."
+
+#: _inc/options/general.php:24
+msgid "Use Honeypot"
+msgstr "Honeypot verwenden"
+
+#: _inc/options/general.php:29
+msgid ""
+"If active, a hidden field will be added to all forms to counter spam "
+"activity."
+msgstr ""
+"Falls aktiv, wird allen Formularen ein verstecktes Feld hinzugefügt, um Spam-"
+"Aktivitäten entgegenzuwirken."
+
+#: _inc/options/general.php:33 _inc/options/mailgun.php:48
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: _inc/options/mailgun.php:13
+msgid "Mailgun Settings"
+msgstr "Mailgun-Einstellungen"
+
+#: _inc/options/mailgun.php:20
+msgid "Mailgun Domain Name"
+msgstr "Mailgun-Domainname"
+
+#: _inc/options/mailgun.php:25
+msgid "Your Mailgun domain name."
+msgstr "Ihr Mailgun-Domainname."
+
+#: _inc/options/mailgun.php:28
+msgid "Mailgun API Key"
+msgstr "Mailgun-API-Schlüssel"
+
+#: _inc/options/mailgun.php:33
+msgid ""
+"To find your key, visit the Mailgun Dashboard and click on \"API keys\"."
+msgstr ""
+"Um Ihren Schlüssel zu finden besuchen Sie bitte Ihr Mailgun-Dashboard und "
+"klicken Sie auf \"API keys\"."
+
+#: _inc/options/mailgun.php:36
+msgid "Mailgun Region"
+msgstr "Mailgun-Region"
+
+#: _inc/options/mailgun.php:41
+msgid "Europe"
+msgstr "Europa"
+
+#: _inc/options/mailgun.php:42
+msgid "U.S./North America"
+msgstr "USA/Nordamerika"
+
+#: _inc/options/mailgun.php:44
+msgid ""
+"Please choose the region your Mailgun sending domain is associated with."
+msgstr "Bitte wählen Sie die Region, der ihre Mailgun-Domain zugeordnet ist."
+
+#: _inc/options/template-parts/error-message.php:9
+msgid ""
+"The options page for the <strong>OmniMailer</strong> plugin cannot be "
+"displayed."
+msgstr ""
+"Die Einstellungsseite für das Plugin <strong>OmniMailer</strong> kann nicht "
+"angezeigt werden."
+
+#. translators: %s: Plugin file path
+#: _inc/options/template-parts/error-message.php:11
+msgid "The file <strong>%s</strong> is missing. Please reinstall the plugin."
+msgstr ""
+"Die Datei <strong>%s</strong> fehlt. Bitte installieren Sie das Plugin "
+"erneut."
+
+#: _inc/options/template-parts/wrapper.php:19
+msgid "OmniMailer Settings"
+msgstr "OmniMailer-Einstellungen"
+
+#: _inc/options/template-parts/wrapper.php:21
+msgctxt "Settings Page"
+msgid "General"
+msgstr "Allgemein"
+
+#: _inc/options/template-parts/wrapper.php:22
+msgid "Mailgun"
+msgstr "Mailgun"
+
+#: assets/js/form.js:98 assets/js/form.js:126
+msgid "This field is mandatory."
+msgstr "Dieses Feld ist ein Pflichtfeld."
+
+#: assets/js/form.js:111
+msgid "Please enter a valid e-mail address."
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+
+#: assets/js/mailgun-subscribe.js:46
+msgid "Subscription successful!"
+msgstr "Abonnement erfolgreich!"
+
+#: assets/js/mailgun-subscribe.js:47
+msgid "Thank you for subscribing."
+msgstr "Vielen Dank für Ihr Abonnement."
+
+#: assets/js/mailgun-subscribe.js:52
+msgid "You've got mail!"
+msgstr "Sie haben neue Nachrichten!"
+
+#: assets/js/mailgun-subscribe.js:53
+msgid ""
+"We sent you a confirmation e-mail to make sure you really want to receive "
+"our e-mails. Please check your e-mail inbox and click the activation link in "
+"our e-mail to confirm your subscription."
+msgstr ""
+"Wir haben Ihnen eine Benachrichtungsmail geschickt um sicherzugehen, dass "
+"Sie unsere E-Mails wirklich empfangen wollen. Bitte überprüfen Sie Ihren "
+"Posteingang und klicken Sie auf den Aktivierungslink in unserer E-Mail um "
+"Ihr Abonnement zu bestätigen."
+
+#: assets/js/mailgun-subscribe.js:61 assets/js/mailgun-subscribe.js:67
+#: assets/js/mailgun-subscribe.js:73 assets/js/mailgun-subscribe.js:80
+#: assets/js/mailgun-subscribe.js:86 assets/js/mailgun-subscribe.js:93
+#: assets/js/mailgun-subscribe.js:102 assets/js/mailgun-subscribe.js:108
+msgid "An error occurred"
+msgstr "Ein Fehler ist aufgetreten"
+
+#: assets/js/mailgun-subscribe.js:62
+msgid ""
+"(400) It seems that you are already subscribed to this list. If you wish to "
+"unsubscribe, please click the unsubscribe link at the bottom of one of our e-"
+"mails."
+msgstr ""
+"(400) Anscheinend haben Sie diese Liste bereits abonniert. Falls Sie Ihr "
+"Abonnement kündigen wollen, klicken Sie bitte auf den Link am Ende einer "
+"unserer E-Mails."
+
+#: assets/js/mailgun-subscribe.js:68
+msgid ""
+"(401) Some permissions are missing to add you to the list. Please contact us "
+"if this error persists."
+msgstr ""
+"(401) Es fehlen einige Rechte, um Sie zu der Liste hinzuzufügen. Bitte "
+"kontaktieren Sie uns, falls dieser Fehler weiterhin auftritt."
+
+#: assets/js/mailgun-subscribe.js:74
+msgid ""
+"(404) This list does not exist. Please contact us if this error persists."
+msgstr ""
+"(404) Diese Liste existiert nicht. Bitte kontaktieren Sie uns, falls dieser "
+"Fehler weiterhin auftritt."
+
+#: assets/js/mailgun-subscribe.js:81
+msgid ""
+"(500) It seems that you are already subscribed to this list. If you wish to "
+"unsubscribe, please click the unsubscribe link at the bottom of one of our e-"
+"mails."
+msgstr ""
+"(500) Anscheinend haben Sie diese Liste bereits abonniert. Falls Sie Ihr "
+"Abonnement kündigen wollen, klicken Sie bitte auf den Link am Ende einer "
+"unserer E-Mails."
+
+#: assets/js/mailgun-subscribe.js:87
+msgid ""
+"(500) It seems you already tried subscribing to this list. Please click the "
+"confirmation link in the e-mail we sent to your inbox to activate your "
+"subscription."
+msgstr ""
+"(500) Anscheinend haben Sie bereits versucht, diese Liste zu abonnieren. "
+"Bitte klicken Sie auf den Aktivierungslink in unserer E-Mail um Ihr "
+"Abonnement zu bestätigen."
+
+#: assets/js/mailgun-subscribe.js:94
+msgid ""
+"(503) Our database server appears to have some trouble. Please kindly try "
+"again later and contact us if this error persists."
+msgstr ""
+"(503) Unser Datenbankserver hat anscheinend Schwierigkeiten. Bitte versuchen "
+"Sie es später erneut und kontaktieren Sie uns, falls der Fehler weiterhin "
+"auftritt."
+
+#: assets/js/mailgun-subscribe.js:103
+msgid "The following error occurred while displaying this message: "
+msgstr "Der folgende Fehler ist bei der Anzeige der Nachricht aufgetreten: "
+
+#: assets/js/mailgun-subscribe.js:109
+msgid "Please check your connectivity. If the error persists, try again later."
+msgstr ""
+"Bitte überprüfen Sie Ihre Internetverbindung. Falls dieser Fehler weiterhin "
+"auftritt, versuchen Sie es später erneut."
+
+#~ msgid ""
+#~ "<div class=\"notice notice-error\"><p>The options page for the "
+#~ "<strong>Mailgun</strong> plugin cannot be displayed. The file <strong>%s</"
+#~ "strong> is missing. Please reinstall the plugin.</p></div>"
+#~ msgstr ""
+#~ "<div class=\"notice notice-error\"><p>Die Einstellungen für das "
+#~ "<strong>Mailgun</strong>-Plugin können nicht angezeigt werden. Die Datei "
+#~ "<strong>%s</strong> fehlt. Bitte installieren Sie das Plugin erneut.</p></"
+#~ "div>"

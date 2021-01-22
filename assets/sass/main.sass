@@ -1,0 +1,54 @@
+/* ========================
+ *   0. TABLE OF CONTENTS
+ *
+ *   1. VARIABLES
+ *   2. HELPERS
+ *   3. NOTIFICATIONS
+ * ======================== */
+
+/* ========================
+ *   1. VARIABLES
+ * ======================== */
+
+@import 'variables'
+
+/* ========================
+ *   2. HELPERS
+ * ======================== */
+
+.hide
+  display: none !important
+
+/* ========================
+ *   3. NOTIFICATIONS
+ * ======================== */
+
+.omnimailer-push-notification
+  padding: .75em 1em
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+  z-index: 9
+
+  &.success
+    background-color: $success-color-bg
+    border: 1px solid $success-color
+    color: $success-color
+
+  &.error
+    background-color: $alert-color-bg
+    border: 1px solid $alert-color
+    color: $alert-color
+
+  .omnimailer-push-notification-inner
+    position: relative
+
+    .omnimailer-push-notification-close-button
+      cursor: pointer
+      font-weight: 600
+      padding: .5em 1em
+      position: absolute
+      top: -.5em
+      right: 1em

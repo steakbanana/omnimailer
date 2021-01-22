@@ -1,0 +1,30 @@
+/* ========================
+ *   0. TABLE OF CONTENTS
+ *
+ *   1. VARIABLES
+ *   2. HELPERS
+ *   3. OPTIONS PAGE
+ * ======================== */
+/* ========================
+ *   1. VARIABLES
+ * ======================== */
+/* ========================
+ *   2. HELPERS
+ * ======================== */
+.hide {
+  display: none !important; }
+
+/* ========================
+ *   3. OPTIONS PAGE
+ * ======================== */
+#omnimailer_options .sb-logo-link {
+  display: block;
+  padding: 9px 0 4px 0; }
+  #omnimailer_options .sb-logo-link img {
+    height: 43px; }
+#omnimailer_options .nav-tab-content {
+  margin: 1em 0 0; }
+  #omnimailer_options .nav-tab-content h2 {
+    font-size: 1.3em;
+    margin: 0;
+    padding: 1em 0; }
