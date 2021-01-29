@@ -32,7 +32,7 @@ class OmniMailer_Admin {
 	}
 
 	public function register_scripts() {
-		wp_enqueue_script( 'omnimailer-admin', OMNIMAILER_URL . 'assets/js/admin.js', array(), $this->version, true );
+		wp_enqueue_script( 'omnimailer-admin', OMNIMAILER_URL . 'assets/js/dist/admin.js', array(), $this->version, true );
 	}
 
 	public function admin_menu() {

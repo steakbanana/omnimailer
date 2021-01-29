@@ -34,17 +34,17 @@ class OmniMailer_Public {
 	}
 
 	public function register_scripts() {
-		wp_register_script( 'omnimailer-mailgun', OMNIMAILER_URL . 'assets/js/mailgun.js', array(), $this->version, true );
-		wp_register_script( 'omnimailer-mailgun-form', OMNIMAILER_URL . 'assets/js/mailgun-form.js', array( 'omnimailer-mailgun-subscribe' ), $this->version, true );
-		wp_register_script( 'omnimailer-shortcode', OMNIMAILER_URL . 'assets/js/shortcode.js', array( 'omnimailer-mailgun-form' ), $this->version, true );
-		wp_register_script( 'omnimailer-form', OMNIMAILER_URL . 'assets/js/form.js', array( 'omnimailer-mailgun', 'omnimailer-notification-handler', 'wp-i18n' ), $this->version, true );
-		wp_register_script( 'omnimailer-mailgun-subscribe', OMNIMAILER_URL . 'assets/js/mailgun-subscribe.js', array( 'omnimailer-mailgun', 'omnimailer-form', 'omnimailer-messages', 'wp-i18n' ), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun', OMNIMAILER_URL . 'assets/js/dist/mailgun.js', array(), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun-form', OMNIMAILER_URL . 'assets/js/dist/mailgun-form.js', array( 'omnimailer-mailgun-subscribe' ), $this->version, true );
+		wp_register_script( 'omnimailer-shortcode', OMNIMAILER_URL . 'assets/js/dist/shortcode.js', array( 'omnimailer-mailgun-form' ), $this->version, true );
+		wp_register_script( 'omnimailer-form', OMNIMAILER_URL . 'assets/js/dist/form.js', array( 'omnimailer-mailgun', 'omnimailer-notification-handler', 'wp-i18n' ), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun-subscribe', OMNIMAILER_URL . 'assets/js/dist/mailgun-subscribe.js', array( 'omnimailer-mailgun', 'omnimailer-form', 'omnimailer-messages', 'wp-i18n' ), $this->version, true );
 
 		// Always enqueue main and notification scripts to ensure availability throughout the site
-		wp_enqueue_script( 'omnimailer-notifications', OMNIMAILER_URL . 'assets/js/notification.js', array(), $this->version, true );
-		wp_enqueue_script( 'omnimailer-notification-handler', OMNIMAILER_URL . 'assets/js/notification-handler.js', array( 'omnimailer-notifications', 'wp-i18n' ), $this->version, true );
-		wp_enqueue_script( 'omnimailer', OMNIMAILER_URL . 'assets/js/main.js', array( 'omnimailer-notification-handler' ), $this->version, true );
-		wp_enqueue_script( 'omnimailer-messages', OMNIMAILER_URL . 'assets/js/messages.js', array( 'omnimailer', 'wp-i18n' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer-notifications', OMNIMAILER_URL . 'assets/js/dist/notification.js', array(), $this->version, true );
+		wp_enqueue_script( 'omnimailer-notification-handler', OMNIMAILER_URL . 'assets/js/dist/notification-handler.js', array( 'omnimailer-notifications', 'wp-i18n' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer', OMNIMAILER_URL . 'assets/js/dist/main.js', array( 'omnimailer-notification-handler' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer-messages', OMNIMAILER_URL . 'assets/js/dist/messages.js', array( 'omnimailer', 'wp-i18n' ), $this->version, true );
 	}
 
 	/**
