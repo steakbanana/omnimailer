@@ -67,6 +67,7 @@ var OmniMailerMailgunSubscribeForm = /*#__PURE__*/function (_OmniMailerForm) {
           /**
            * Call API and wait for a response to output.
            */
+          // todo refactor into form abstract class
 
           OmniMailerMailgun.callAPI(data).then(function (response) {
             if (response.success === true) {

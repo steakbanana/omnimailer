@@ -33,6 +33,7 @@ class OmniMailerMailgunSubscribeForm extends OmniMailerForm {
                 /**
                  * Call API and wait for a response to output.
                  */
+                // todo refactor into form abstract class
                 OmniMailerMailgun.callAPI(data).then((response) => {
                     if(response.success === true) {
                         try {

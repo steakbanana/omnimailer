@@ -130,7 +130,8 @@ var OmniMailerPushNotification = /*#__PURE__*/function (_OmniMailerNotificati) {
   }
 
   return OmniMailerPushNotification;
-}(OmniMailerNotification);
+}(OmniMailerNotification); // todo rename to field alert and add form alert (big form overlay) as notification type
+
 
 var OmniMailerFormAlert = /*#__PURE__*/function (_OmniMailerNotificati2) {
   _inherits(OmniMailerFormAlert, _OmniMailerNotificati2);
