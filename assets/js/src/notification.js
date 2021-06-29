@@ -96,3 +96,19 @@ class OmniMailerFieldAlert extends OmniMailerNotification {
     }
 
 }
+
+class OmniMailerFormAlert extends OmniMailerNotification {
+
+    constructor(type, data) {
+        super(type, data);
+
+        this.type = "error";
+
+        const allowedData = ["message", "heading"];
+        const template = document.getElementById("omnimailer-form-alert-template");
+
+        if(this.validate(allowedData)) {
+            this.instance = this.createInstance(template);
+        }
+    }
+}
