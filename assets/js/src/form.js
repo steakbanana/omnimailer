@@ -144,7 +144,7 @@ class OmniMailerForm {
             sibling.classList.add("error");
         }
         else {
-            OmniMailerNotificationHandler.showErrorNotification('omnimailer-form-alert', message, element.parentNode);
+            OmniMailerNotificationHandler.showErrorNotification('omnimailer-field-alert', message, element.parentNode);
         }
     }
 
@@ -162,7 +162,7 @@ class OmniMailerForm {
             sibling.classList.remove("error");
         }
         else {
-            const notification = element.parentNode.querySelector(".omnimailer-form-alert");
+            const notification = element.parentNode.querySelector(".omnimailer-field-alert");
 
             if(notification) {
                 OmniMailerNotificationHandler.hideNotification(notification);

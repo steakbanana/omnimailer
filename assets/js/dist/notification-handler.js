@@ -43,8 +43,8 @@ var OmniMailerNotificationHandler = /*#__PURE__*/function () {
           queue = this.pushNotificationQueue;
           break;
 
-        case 'omnimailer-form-alert':
-          notification = new OmniMailerFormAlert(type, data);
+        case 'omnimailer-field-alert':
+          notification = new OmniMailerFieldAlert(type, data);
           break;
 
         default:

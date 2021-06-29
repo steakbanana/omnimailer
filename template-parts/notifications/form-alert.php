@@ -1,5 +1,5 @@
-<div id="omnimailer-form-alert-template" class="omnimailer-form-alert hide">
-    <div class="omnimailer-form-alert-inner">
-        <span data-omnimailer-form-alert="message"></span>
+<div id="omnimailer-field-alert-template" class="omnimailer-field-alert hide">
+    <div class="omnimailer-field-alert-inner">
+        <span data-omnimailer-field-alert="message"></span>
     </div>
 </div>

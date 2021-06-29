@@ -26,8 +26,8 @@ class OmniMailerNotificationHandler {
                 notification = new OmniMailerPushNotification(type, data);
                 queue = this.pushNotificationQueue;
                 break;
-            case 'omnimailer-form-alert':
-                notification = new OmniMailerFormAlert(type, data);
+            case 'omnimailer-field-alert':
+                notification = new OmniMailerFieldAlert(type, data);
                 break;
             default:
                 notification = new OmniMailerPushNotification("error", {message: __("(404) Unknown notification type.", "omnimailer")});
