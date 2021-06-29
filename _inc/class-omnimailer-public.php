@@ -83,7 +83,7 @@ class OmniMailer_Public {
 		/**
 		 * @var string $service     The e-mail provider used for API calls.
 		 * @var string $handle      The action to be performed.
-		 * @var string $list        The mailing list to be used.
+		 * @var string $list        The mailing list to be used. (!) Referred to by mailgun as "Alias address".
 		 * @var string $has_name    Whether a name is required or not (0|1|mandatory).
 		 * @var string $has_labels  Whether each input should be labeled in addition to its placeholder or not (0|1).
 		 */
