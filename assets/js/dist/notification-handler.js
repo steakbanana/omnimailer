@@ -47,6 +47,10 @@ var OmniMailerNotificationHandler = /*#__PURE__*/function () {
           notification = new OmniMailerFieldAlert(type, data);
           break;
 
+        case 'omnimailer-form-alert':
+          notification = new OmniMailerFormAlert(type, data);
+          break;
+
         default:
           notification = new OmniMailerPushNotification("error", {
             message: __("(404) Unknown notification type.", "omnimailer")

@@ -79,8 +79,6 @@ class OmniMailerPushNotification extends OmniMailerNotification {
 
 }
 
-
-// todo rename to field alert and add form alert (big form overlay) as notification type
 class OmniMailerFieldAlert extends OmniMailerNotification {
 
     constructor(type, data) {

@@ -33,8 +33,7 @@ class OmniMailerMailgunSubscribeForm extends OmniMailerForm {
                 /**
                  * Call API and wait for a response to output.
                  */
-                // todo refactor into form abstract class
-                OmniMailerMailgun.callAPIAndHandleResponse(data)
+                this.callAPIAndHandleResponse(data);
             }
         });
     }

@@ -67,33 +67,8 @@ var OmniMailerMailgunSubscribeForm = /*#__PURE__*/function (_OmniMailerForm) {
           /**
            * Call API and wait for a response to output.
            */
-          // todo refactor into form abstract class
 
-          OmniMailerMailgun.callAPI(data).then(function (response) {
-            if (response.success === true) {
-              try {
-                var responseCode = response.data.response.code;
-
-                if (responseCode) {
-                  var responseText = _this.getResponseText(responseCode);
-
-                  if (responseText.type === "success") {
-                    _this.showSuccessMessage(responseText.heading, responseText.message);
-
-                    _this.clear();
-                  } else {
-                    _this.showErrorMessage(responseText.heading, responseText.message);
-                  }
-                }
-              } catch (error) {
-                _this.showErrorMessage(OmniMailerMessages.genericErrorHeading, __("The following error occurred while displaying this message: ", "omnimailer") + error);
-              }
-            } else {
-              _this.showErrorMessage(OmniMailerMessages.genericErrorHeading, __("Please check your connectivity. If the error persists, try again later.", "omnimailer"));
-            }
-
-            _this.overlay.classList.add("hide");
-          });
+          _this.callAPIAndHandleResponse(data);
         }
       });
     }
