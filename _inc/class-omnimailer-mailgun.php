@@ -53,7 +53,7 @@ class OmniMailer_Mailgun {
 					'response' => array(
 						'code' => 500,
 					),
-					'service' => 'mailgun'
+					'provider' => 'mailgun'
 				);
 			}
 
@@ -123,7 +123,7 @@ class OmniMailer_Mailgun {
 		$result = wp_remote_request( $url, $args );
 
 		if ( ! is_wp_error( $result ) ) {
-			$result['service'] = 'mailgun';
+			$result['provider'] = 'mailgun';
 			return $result;
 		}
 

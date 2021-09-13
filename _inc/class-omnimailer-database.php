@@ -74,13 +74,13 @@ class OmniMailer_Database {
 	 * Inserts a new entry into the database.
 	 *
 	 * @param string $email   A valid e-mail address.
-	 * @param string $service The e-mail provider used for API calls.
+	 * @param string $provider The e-mail provider used for API calls.
 	 * @param string $list    The list the subscriber will be added to.
 	 * @param string $name    The subscriber's first or full name.
 	 *
 	 * @since 0.0.1
 	 */
-	public static function insert( $email, $service, $list, $name = null ) {
+	public static function insert( $email, $provider, $list, $name = null ) {
 		global $wpdb;
 
 		$data = array(
@@ -88,7 +88,7 @@ class OmniMailer_Database {
 			'name'      => $name,
 			'requested' => current_time( 'mysql' ),
 			'uuid'      => wp_generate_uuid4(),
-			'service'   => $service,
+			'provider'   => $provider,
 			'list'      => $list
 		);
 

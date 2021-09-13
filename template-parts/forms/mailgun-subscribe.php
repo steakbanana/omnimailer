@@ -3,7 +3,7 @@
 namespace OmniMailer;
 
 /**
-* @var string $service
+* @var string $provider
 * @var string $handle
 * @var string $list
 * @var string $legend
@@ -13,7 +13,7 @@ namespace OmniMailer;
 
 $privacy_url = get_privacy_policy_url();
 ?>
-<div class="omnimailer-form omnimailer-form-subscribe" data-omnimailer-form-service="<?= $service; ?>" data-omnimailer-form-handle="<?= $handle; ?>" data-omnimailer-form-list="<?= $list; ?>">
+<div class="omnimailer-form omnimailer-form-subscribe" data-omnimailer-form-provider="<?= $provider; ?>" data-omnimailer-form-handle="<?= $handle; ?>" data-omnimailer-form-list="<?= $list; ?>">
     <div class="omnimailer-form-message hide">
         <div class="omnimailer-form-message-inner">
             <div class="omnimailer-form-message-close-button">×</div>

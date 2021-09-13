@@ -78,6 +78,14 @@ class OmniMailer {
 		$this->loader->add_action( 'wp_footer', $plugin_public, 'notification_center' );
 	}
 
+	private function define_subscriber_hooks() {
+
+		$post_type = 'omnimailer_subscriber';
+
+		$plugin_post_type = new OmniMailer_Subscriber_PostType( $this->get_plugin_name(), $this->get_version(), $post_type );
+
+	}
+
 	public function init() {
 		$this->loader->init();
 	}

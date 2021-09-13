@@ -34,17 +34,17 @@ class OmniMailer_Public {
 	}
 
 	public function register_scripts() {
-		wp_register_script( 'omnimailer-mailgun', OMNIMAILER_URL . 'assets/js/dist/mailgun.js', array(), $this->version, true );
-		wp_register_script( 'omnimailer-mailgun-form', OMNIMAILER_URL . 'assets/js/dist/mailgun-form.js', array( 'omnimailer-mailgun-subscribe' ), $this->version, true );
-		wp_register_script( 'omnimailer-shortcode', OMNIMAILER_URL . 'assets/js/dist/shortcode.js', array( 'omnimailer-mailgun-form' ), $this->version, true );
-		wp_register_script( 'omnimailer-form', OMNIMAILER_URL . 'assets/js/dist/form.js', array( 'omnimailer-mailgun', 'omnimailer-notification-handler', 'wp-i18n' ), $this->version, true );
-		wp_register_script( 'omnimailer-mailgun-subscribe', OMNIMAILER_URL . 'assets/js/dist/mailgun-subscribe.js', array( 'omnimailer-mailgun', 'omnimailer-form', 'omnimailer-messages', 'wp-i18n' ), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun', OMNIMAILER_URL . 'assets/js/src/mailgun.js', array(), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun-form', OMNIMAILER_URL . 'assets/js/src/mailgun-form.js', array( 'omnimailer-mailgun-subscribe' ), $this->version, true );
+		wp_register_script( 'omnimailer-shortcode', OMNIMAILER_URL . 'assets/js/src/shortcode.js', array( 'omnimailer-mailgun-form' ), $this->version, true );
+		wp_register_script( 'omnimailer-form', OMNIMAILER_URL . 'assets/js/src/form.js', array( 'omnimailer-mailgun', 'omnimailer-notification-handler', 'wp-i18n' ), $this->version, true );
+		wp_register_script( 'omnimailer-mailgun-subscribe', OMNIMAILER_URL . 'assets/js/src/mailgun-subscribe.js', array( 'omnimailer-mailgun', 'omnimailer-form', 'omnimailer-messages', 'wp-i18n' ), $this->version, true );
 
 		// Always enqueue main and notification scripts to ensure availability throughout the site
-		wp_enqueue_script( 'omnimailer-notifications', OMNIMAILER_URL . 'assets/js/dist/notification.js', array(), $this->version, true );
-		wp_enqueue_script( 'omnimailer-notification-handler', OMNIMAILER_URL . 'assets/js/dist/notification-handler.js', array( 'omnimailer-notifications', 'wp-i18n' ), $this->version, true );
-		wp_enqueue_script( 'omnimailer', OMNIMAILER_URL . 'assets/js/dist/main.js', array( 'omnimailer-notification-handler' ), $this->version, true );
-		wp_enqueue_script( 'omnimailer-messages', OMNIMAILER_URL . 'assets/js/dist/messages.js', array( 'omnimailer', 'wp-i18n' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer-notifications', OMNIMAILER_URL . 'assets/js/src/notification.js', array(), $this->version, true );
+		wp_enqueue_script( 'omnimailer-notification-handler', OMNIMAILER_URL . 'assets/js/src/notification-handler.js', array( 'omnimailer-notifications', 'wp-i18n' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer', OMNIMAILER_URL . 'assets/js/src/main.js', array( 'omnimailer-notification-handler' ), $this->version, true );
+		wp_enqueue_script( 'omnimailer-messages', OMNIMAILER_URL . 'assets/js/src/messages.js', array( 'omnimailer', 'wp-i18n' ), $this->version, true );
 	}
 
 	/**
@@ -81,14 +81,14 @@ class OmniMailer_Public {
 		wp_enqueue_script( 'omnimailer-shortcode' );
 
 		/**
-		 * @var string $service     The e-mail provider used for API calls.
+		 * @var string $provider     The e-mail provider used for API calls.
 		 * @var string $handle      The action to be performed.
 		 * @var string $list        The mailing list to be used. (!) Referred to by mailgun as "Alias address".
 		 * @var string $has_name    Whether a name is required or not (0|1|mandatory).
 		 * @var string $has_labels  Whether each input should be labeled in addition to its placeholder or not (0|1).
 		 */
 		extract( shortcode_atts( array(
-			'service' => null,
+			'provider' => null,
 			'handle' => null,
 			'list' => null,
 			'legend' => null,
@@ -100,17 +100,17 @@ class OmniMailer_Public {
 		ob_start();
 
 		// Enqueue the form script corresponding to the service if available.
-		if( ! empty( $service ) ) {
-			wp_enqueue_script( "omnimailer-{$service}-form" );
+		if( ! empty( $provider ) ) {
+			wp_enqueue_script( "omnimailer-{$provider}-form" );
 
 			/**
 			 * Enqueue the service script as well as the script for the
 			 * action intended if a form template is available.
 			 */
 			if( ! empty( $handle ) ) {
-				if( include OMNIMAILER_DIR . "template-parts/forms/{$service}-{$handle}.php" ) {
-					wp_enqueue_script( "omnimailer-{$service}" );
-					wp_enqueue_script( "omnimailer-{$service}-{$handle}" );
+				if( include OMNIMAILER_DIR . "template-parts/forms/{$provider}-{$handle}.php" ) {
+					wp_enqueue_script( "omnimailer-{$provider}" );
+					wp_enqueue_script( "omnimailer-{$provider}-{$handle}" );
 				}
 				else  {
 					_e( 'Error while displaying the form - unknown handle or service.', 'omnimailer' );

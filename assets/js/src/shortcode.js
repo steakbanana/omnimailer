@@ -17,10 +17,10 @@ class OmniMailerShortcode {
             let forms = document.querySelectorAll(".omnimailer-form");
 
             forms.forEach((element) => {
-                const service = element.getAttribute("data-omnimailer-form-service");
+                const provider = element.getAttribute("data-omnimailer-form-provider");
                 const handle = element.getAttribute("data-omnimailer-form-handle");
 
-                switch(service) {
+                switch(provider) {
                     case 'mailgun':
                         OmniMailerMailgunForm.init(element, handle)
                 }

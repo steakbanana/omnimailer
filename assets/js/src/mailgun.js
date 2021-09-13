@@ -6,7 +6,7 @@ class OmniMailerMailgun {
      * its response and return it.
      */
     static async callAPI(data) {
-        data.service = "mailgun";
+        data.provider = "mailgun";
         data.action = "omnimailer_form_ajax_handler";
         data.security = OmniMailer.getAjaxNonce();
 

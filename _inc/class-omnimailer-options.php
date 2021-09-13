@@ -45,18 +45,18 @@ class OmniMailer_Options {
 	 * Returns a single option or a default value.
 	 *
 	 * @param string $option        The option to be retrieved.
-	 * @param string $service       The e-mail provider the option is attributed to.
+	 * @param string $provider       The e-mail provider the option is attributed to.
 	 * @param array $options        An alternate set of options.
 	 * @param string|false $default A default value to be returned if the option is not available.
 	 *
 	 * @since 0.0.1
 	 */
-	public static function get_option( $option, $service = null, $options = null, $default = false ) {
+	public static function get_option( $option, $provider = null, $options = null, $default = false ) {
 		if( is_null( $options ) )
 			$options = self::get_options();
 
-		if( ! is_null( $service ) )
-			return $options[$service][$option] ?: $default;
+		if( ! is_null( $provider ) )
+			return $options[$provider][$option] ?: $default;
 
 		return $options[$option] ?: $default;
 	}

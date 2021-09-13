@@ -32,7 +32,7 @@ class OmniMailer_Admin {
 	}
 
 	public function register_scripts() {
-		wp_enqueue_script( 'omnimailer-admin', OMNIMAILER_URL . 'assets/js/dist/admin.js', array(), $this->version, true );
+		wp_enqueue_script( 'omnimailer-admin', OMNIMAILER_URL . 'assets/js/src/admin.js', array(), $this->version, true );
 	}
 
 	public function admin_menu() {
@@ -69,7 +69,7 @@ class OmniMailer_Admin {
 	public function omnimailer_form_ajax_handler() {
 		check_ajax_referer( 'ajax_handler_nonce', 'security' );
 
-		switch( $_POST['service'] ) {
+		switch( $_POST['provider'] ) {
 			case 'mailgun' :
 				OmniMailer_Mailgun::ajax_handler();
 				break;

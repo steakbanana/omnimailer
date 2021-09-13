@@ -29,7 +29,7 @@ class OmniMailer {
                             if(response.data) {
                                 OmniMailerNotificationHandler.showErrorNotification(
                                     "omnimailer-push-notification",
-                                    OmniMailerMessages[response.data.service][response.data.response.code].message
+                                    OmniMailerMessages[response.data.provider][response.data.response.code].message
                                 );
                             }
                             else {
