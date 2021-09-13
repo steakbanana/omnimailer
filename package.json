@@ -2,26 +2,18 @@
   "name": "omnimailer",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "babel-minify": "^0.5.1"
-  },
-  "scripts": {
-    "build": "babel assets/js/src/* -d assets/js/dist --no-comments"
-  },
+  "main": "assets/js/src/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/steakbanana/omnimailer.git"
+  },
+  "dependencies": {
+    "sass": "^1.39.2"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/steakbanana/omnimailer/issues"
   },
-  "homepage": "https://github.com/steakbanana/omnimailer#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "babel-preset-minify": "^0.5.1"
-  }
+  "homepage": "https://github.com/steakbanana/omnimailer#readme"
 }

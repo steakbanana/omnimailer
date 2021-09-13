@@ -1,3 +1,2 @@
 package-lock.json
-# conventionally, we ignore node_modules as well
-# node_modules/
+node_modules/
