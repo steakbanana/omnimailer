@@ -26,6 +26,9 @@ class OmniMailerNotificationHandler {
                 notification = new OmniMailerPushNotification(type, data);
                 queue = this.pushNotificationQueue;
                 break;
+            case 'omnimailer-field-alert':
+                notification = new OmniMailerFieldAlert(type, data);
+                break;
             case 'omnimailer-form-alert':
                 notification = new OmniMailerFormAlert(type, data);
                 break;

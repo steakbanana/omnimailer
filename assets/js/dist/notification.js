@@ -130,25 +130,49 @@ var OmniMailerPushNotification = /*#__PURE__*/function (_OmniMailerNotificati) {
   }
 
   return OmniMailerPushNotification;
-}(OmniMailerNotification); // todo rename to field alert and add form alert (big form overlay) as notification type
+}(OmniMailerNotification);
 
+var OmniMailerFieldAlert = /*#__PURE__*/function (_OmniMailerNotificati2) {
+  _inherits(OmniMailerFieldAlert, _OmniMailerNotificati2);
 
-var OmniMailerFormAlert = /*#__PURE__*/function (_OmniMailerNotificati2) {
-  _inherits(OmniMailerFormAlert, _OmniMailerNotificati2);
+  var _super2 = _createSuper(OmniMailerFieldAlert);
 
-  var _super2 = _createSuper(OmniMailerFormAlert);
-
-  function OmniMailerFormAlert(type, data) {
+  function OmniMailerFieldAlert(type, data) {
     var _this2;
 
-    _classCallCheck(this, OmniMailerFormAlert);
+    _classCallCheck(this, OmniMailerFieldAlert);
 
     _this2 = _super2.call(this, type, data);
     _this2.type = "error";
     var allowedData = ["message"];
-    var template = document.getElementById("omnimailer-form-alert-template");
+    var template = document.getElementById("omnimailer-field-alert-template");
     if (_this2.validate(allowedData)) _this2.instance = _this2.createInstance(template);
     return _this2;
+  }
+
+  return OmniMailerFieldAlert;
+}(OmniMailerNotification);
+
+var OmniMailerFormAlert = /*#__PURE__*/function (_OmniMailerNotificati3) {
+  _inherits(OmniMailerFormAlert, _OmniMailerNotificati3);
+
+  var _super3 = _createSuper(OmniMailerFormAlert);
+
+  function OmniMailerFormAlert(type, data) {
+    var _this3;
+
+    _classCallCheck(this, OmniMailerFormAlert);
+
+    _this3 = _super3.call(this, type, data);
+    _this3.type = "error";
+    var allowedData = ["message", "heading"];
+    var template = document.getElementById("omnimailer-form-alert-template");
+
+    if (_this3.validate(allowedData)) {
+      _this3.instance = _this3.createInstance(template);
+    }
+
+    return _this3;
   }
 
   return OmniMailerFormAlert;

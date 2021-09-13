@@ -85,23 +85,23 @@
       border: 1px solid #a94442;
       box-shadow: rgba(169, 68, 66, 0.5) 0 1px 2px 0 inset;
       color: #a94442; }
-    .omnimailer-form form fieldset .omnimailer-form-alert {
+    .omnimailer-form form fieldset .omnimailer-field-alert {
       background-color: #ebcdcc;
       font-size: 0.8em;
       padding: 0 0.25em;
       position: absolute;
       top: 0; }
-      .omnimailer-form form fieldset .omnimailer-form-alert.success {
+      .omnimailer-form form fieldset .omnimailer-field-alert.success {
         color: #3c763d; }
-        .omnimailer-form form fieldset .omnimailer-form-alert.success .omnimailer-form-alert-inner::after {
+        .omnimailer-form form fieldset .omnimailer-field-alert.success .omnimailer-field-alert-inner::after {
           border-top: 5px solid #aad4ab; }
-      .omnimailer-form form fieldset .omnimailer-form-alert.error {
+      .omnimailer-form form fieldset .omnimailer-field-alert.error {
         color: #a94442; }
-        .omnimailer-form form fieldset .omnimailer-form-alert.error .omnimailer-form-alert-inner::after {
+        .omnimailer-form form fieldset .omnimailer-field-alert.error .omnimailer-field-alert-inner::after {
           border-top: 5px solid #ebcdcc; }
-      .omnimailer-form form fieldset .omnimailer-form-alert .omnimailer-form-alert-inner {
+      .omnimailer-form form fieldset .omnimailer-field-alert .omnimailer-field-alert-inner {
         position: relative; }
-        .omnimailer-form form fieldset .omnimailer-form-alert .omnimailer-form-alert-inner::after {
+        .omnimailer-form form fieldset .omnimailer-field-alert .omnimailer-field-alert-inner::after {
           border-right: 5px solid transparent;
           border-left: 5px solid transparent;
           clear: both;

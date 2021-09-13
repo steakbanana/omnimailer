@@ -180,7 +180,7 @@ var OmniMailerForm = /*#__PURE__*/function () {
       if (sibling && sibling.classList.contains("checkbox-label")) {
         sibling.classList.add("error");
       } else {
-        OmniMailerNotificationHandler.showErrorNotification('omnimailer-form-alert', message, element.parentNode);
+        OmniMailerNotificationHandler.showErrorNotification('omnimailer-field-alert', message, element.parentNode);
       }
     }
     /**
@@ -198,7 +198,7 @@ var OmniMailerForm = /*#__PURE__*/function () {
       if (sibling && sibling.classList.contains("checkbox-label")) {
         sibling.classList.remove("error");
       } else {
-        var notification = element.parentNode.querySelector(".omnimailer-form-alert");
+        var notification = element.parentNode.querySelector(".omnimailer-field-alert");
 
         if (notification) {
           OmniMailerNotificationHandler.hideNotification(notification);
@@ -236,6 +236,37 @@ var OmniMailerForm = /*#__PURE__*/function () {
       this.form.querySelectorAll("[data-omnimailer-form]:not(.mandatory)").forEach(function (element) {
         var key = element.getAttribute("data-omnimailer-form");
         _this2.values[key] = element.getAttribute("type") !== "checkbox" ? element.value : element.checked;
+      });
+    }
+  }, {
+    key: "callAPIAndHandleResponse",
+    value: function callAPIAndHandleResponse(data) {
+      var _this3 = this;
+
+      OmniMailerMailgun.callAPI(data).then(function (response) {
+        if (response.success === true) {
+          try {
+            var responseCode = response.data.response.code;
+
+            if (responseCode) {
+              var responseText = _this3.getResponseText(responseCode);
+
+              if (responseText.type === "success") {
+                _this3.showSuccessMessage(responseText.heading, responseText.message);
+
+                _this3.clear();
+              } else {
+                _this3.showErrorMessage(responseText.heading, responseText.message);
+              }
+            }
+          } catch (error) {
+            _this3.showErrorMessage(OmniMailerMessages.genericErrorHeading, __("The following error occurred while displaying this message: ", "omnimailer") + error);
+          }
+        } else {
+          _this3.showErrorMessage(OmniMailerMessages.genericErrorHeading, __("Please check your connectivity. If the error persists, try again later.", "omnimailer"));
+        }
+
+        _this3.overlay.classList.add("hide");
       });
     }
   }]);

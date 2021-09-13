@@ -111,7 +111,7 @@
           box-shadow: transparentize($alert-color, .5) 0 1px 2px 0 inset
           color: $alert-color
 
-      .omnimailer-form-alert
+      .omnimailer-field-alert
         background-color: $alert-color-bg
         font-size: .8em
         padding: 0 .25em
@@ -121,16 +121,16 @@
         &.success
           color: $success-color
 
-          .omnimailer-form-alert-inner::after
+          .omnimailer-field-alert-inner::after
             border-top: 5px solid $success-color-bg
 
         &.error
           color: $alert-color
 
-          .omnimailer-form-alert-inner::after
+          .omnimailer-field-alert-inner::after
             border-top: 5px solid $alert-color-bg
 
-        .omnimailer-form-alert-inner
+        .omnimailer-field-alert-inner
           position: relative
 
           &::after

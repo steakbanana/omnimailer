@@ -144,7 +144,7 @@ class OmniMailerForm {
             sibling.classList.add("error");
         }
         else {
-            OmniMailerNotificationHandler.showErrorNotification('omnimailer-form-alert', message, element.parentNode);
+            OmniMailerNotificationHandler.showErrorNotification('omnimailer-field-alert', message, element.parentNode);
         }
     }
 
@@ -162,7 +162,7 @@ class OmniMailerForm {
             sibling.classList.remove("error");
         }
         else {
-            const notification = element.parentNode.querySelector(".omnimailer-form-alert");
+            const notification = element.parentNode.querySelector(".omnimailer-field-alert");
 
             if(notification) {
                 OmniMailerNotificationHandler.hideNotification(notification);
@@ -199,6 +199,42 @@ class OmniMailerForm {
             const key = element.getAttribute("data-omnimailer-form");
             this.values[key] = element.getAttribute("type") !== "checkbox" ? element.value : element.checked;
         });
+    }
+
+    callAPIAndHandleResponse(data) {
+        OmniMailerMailgun.callAPI(data).then((response) => {
+            if(response.success === true) {
+                try {
+                    const responseCode = response.data.response.code;
+
+                    if(responseCode) {
+                        let responseText = this.getResponseText(responseCode);
+
+                        if(responseText.type === "success") {
+                            this.showSuccessMessage(responseText.heading, responseText.message);
+                            this.clear();
+                        }
+                        else {
+                            this.showErrorMessage(responseText.heading, responseText.message);
+                        }
+                    }
+                }
+                catch(error) {
+                    this.showErrorMessage(
+                        OmniMailerMessages.genericErrorHeading,
+                        __("The following error occurred while displaying this message: ", "omnimailer") + error);
+                }
+            }
+            else {
+                this.showErrorMessage(
+                    OmniMailerMessages.genericErrorHeading,
+                    __("Please check your connectivity. If the error persists, try again later.", "omnimailer")
+                );
+            }
+
+            this.overlay.classList.add("hide");
+        })
+
     }
 
 }

@@ -79,9 +79,7 @@ class OmniMailerPushNotification extends OmniMailerNotification {
 
 }
 
-
-// todo rename to field alert and add form alert (big form overlay) as notification type
-class OmniMailerFormAlert extends OmniMailerNotification {
+class OmniMailerFieldAlert extends OmniMailerNotification {
 
     constructor(type, data) {
         super(type, data);
@@ -89,10 +87,26 @@ class OmniMailerFormAlert extends OmniMailerNotification {
         this.type = "error";
 
         const allowedData = ["message"];
-        const template = document.getElementById("omnimailer-form-alert-template");
+        const template = document.getElementById("omnimailer-field-alert-template");
 
         if(this.validate(allowedData))
             this.instance = this.createInstance(template);
     }
 
+}
+
+class OmniMailerFormAlert extends OmniMailerNotification {
+
+    constructor(type, data) {
+        super(type, data);
+
+        this.type = "error";
+
+        const allowedData = ["message", "heading"];
+        const template = document.getElementById("omnimailer-form-alert-template");
+
+        if(this.validate(allowedData)) {
+            this.instance = this.createInstance(template);
+        }
+    }
 }
